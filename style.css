@@ -482,8 +482,8 @@ ul {
 
 /* --- SKILLS SECTION --- */
 .skills {
-    padding: 15vh 10vw;
-    min-height: 100vh;
+    padding: 5vh 10vw;
+    min-height: auto;
 }
 
 /* --- SKILLS MARQUEE --- */
