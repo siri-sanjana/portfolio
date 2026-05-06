@@ -388,7 +388,7 @@ ul {
 .project-number {
     font-family: var(--font-heading);
     font-size: 5rem;
-    color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.3);
     line-height: 1;
     margin-bottom: 1rem;
 }
