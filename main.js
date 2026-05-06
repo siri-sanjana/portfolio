@@ -1,4 +1,4 @@
-import { initBallpit } from './ballpit.js?v=13';
+import { initBallpit } from './ballpit.js?v=15';
 // Removed early init; will be called after preloader
 
 // Register GSAP ScrollTrigger
@@ -115,8 +115,7 @@ preloaderTL.call(() => {
         strings: [
             'AI &amp; CS Engineering Student',
             'Data Enthusiast',
-            'Problem Solver',
-            'Full Stack Developer'
+            'Problem Solver'
         ],
         typeSpeed: 50,
         backSpeed: 30,
