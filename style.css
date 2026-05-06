@@ -486,43 +486,61 @@ ul {
     min-height: 100vh;
 }
 
-.skills-container {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    max-width: 900px;
-    margin: 0 auto;
+/* --- SKILLS MARQUEE --- */
+.marquee-wrapper {
+    width: 100vw;
+    margin-left: -10vw; /* Reset the padding from parent section */
+    overflow: hidden;
+    padding: 2rem 0;
+    margin-top: 4rem;
 }
 
-.skill-category h3 {
+.marquee-container {
+    display: flex;
+    width: max-content;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 3rem;
+    padding-left: 3rem;
+    animation: marquee 40s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: var(--text-primary);
-    border-left: 3px solid var(--accent-violet);
-    padding-left: 1rem;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.skill-tag {
-    padding: 1rem 2rem;
-    background: var(--bg-card);
+    color: var(--text-secondary);
+    font-family: var(--font-heading);
+    padding: 1.2rem 3rem;
+    background: rgba(255, 255, 255, 0.02);
     border: var(--glass-border);
-    border-radius: 12px;
-    font-size: 1.1rem;
-    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
-    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    white-space: nowrap;
+    transition: transform 0.3s, background 0.3s, border-color 0.3s;
 }
 
-.skill-tag:hover {
+.marquee-item i {
+    font-size: 2rem;
+}
+
+.marquee-item:hover {
     transform: translateY(-5px);
-    background: rgba(138, 43, 226, 0.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    border-color: rgba(138, 43, 226, 0.5);
+    background: rgba(252, 163, 17, 0.1);
+    border-color: rgba(252, 163, 17, 0.5);
+    color: var(--white);
+}
+
+@keyframes marquee {
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 /* --- CONTACT SECTION --- */
